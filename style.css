@@ -1,0 +1,411 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+	display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+*{
+
+  text-decoration: none;
+}
+body {
+  background-color: #f3f3f3
+}
+
+
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-image:linear-gradient(#23376e,#323640,#040505); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-family: 'Nunito';
+  font-size: 24pt;
+  margin-top:15px;
+  font-weight: bold;
+  color: #edd351;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+header .logo {
+  font-family: 'Nunito';
+  font-size: 24px;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px #edd351;
+  font-weight:700;
+  color: #dfe3f5;
+  display:block;
+  margin:0 auto;
+  margin-left:10px;
+  text-align: left;
+  padding:20px 0px;
+
+}
+
+.typewrite
+{
+  font-family: 'Teko';
+  font-size:28pt;
+  font-weight: 600;
+  color:#edd351;
+  text-align: center;
+  text-shadow:3px 3px #111;
+  letter-spacing: 6px;
+}
+
+#myBtn {
+  opacity:0.5;
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none;
+  outline: none; /* Remove outline */
+/*  background-color: red;  Set a background color */
+  color: yellow; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 28px; /* Increase font size */
+}
+
+
+
+#myBtn:hover {
+  background-color: yellow;
+}
+header nav{
+
+  width: 100%;
+  height: 100px;
+
+}
+.ul {
+  height: 100%;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #fff;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.banner{
+  width:100%;
+  height: calc(100vh - 100px);
+  background-image: url('img/me1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display:table;
+}
+.vertical-center{
+    display:table-cell;
+    vertical-align: middle;
+
+}
+.banner h2{
+
+  font-family: 'Teko';
+  font-size:60pt;
+  font-weight: 600;
+  color:#edd351;
+  text-align: center;
+  text-shadow:3px 3px #111;
+  letter-spacing: 6px;
+}
+.banner h1{
+  font-family: 'Teko';
+  font-size:28pt;
+  font-weight: 700;
+  letter-spacing: 6px;
+  color:#edd351;
+  text-align:center;
+  text-shadow:3px 3px #111;
+}
+.arrow{
+
+  width: 100%;
+  margin:0 auto;
+  text-align: center;
+ animation-name: arrow;
+}
+.arrow::after{
+  content:"";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  border-right:10px solid #edd351;
+  border-bottom:10px solid #edd351;
+  -webkit-transform:rotate(45deg);
+  transform:rotate(45deg);
+  -webkit-animation:3s arrow infinite ease;
+  animation: 3s arrow infinite ease;
+}
+@-webkit-keyframes arrow{
+  0%,100% {
+    top:50px;
+  }
+  50%{
+    top:80px;
+  }
+}
+@keyframes arrow{
+  0%,100% {
+    top:50px;
+  }
+  50%{
+    top:80px;
+  }
+}
+.h2a{
+  padding:30px;
+  background-color: rgba(34, 35, 36,0.8);
+  text-align: center;
+  font-family: 'Teko';
+  font-size:28pt;
+  color:#edd351;
+  text-transform: uppercase;
+}
+.about{
+  background-color:;
+  display: block;
+  scroll-behavior: smooth;
+
+  width: 100%;
+
+}
+.hamburger div{
+  width: 35px;
+  height: 5px;
+  background-color: #edd351;
+  margin: 6px 0;
+
+}
+
+.aboutMe{
+  background-color: white;
+
+}
+.p-about{
+  margin-top:20px;
+  margin-left:20px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  padding-left:10px;
+  padding-bottom: 20px;
+  line-height: 30px;
+  letter-spacing:2px;
+  color: black;
+  font-family:'Nunito';
+  font-size: 16pt;
+}
+.projects {
+  margin:0 auto;
+  padding: 0;
+
+  display: block;
+
+}
+.proDiv{
+  background-image: url("img/projects.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.h1pro{
+
+  padding:30px;
+  background-color:rgba(10, 21, 74, 0.7);
+  text-align: center;
+  font-family: 'Teko';
+  font-size:28pt;
+  color:#fff;
+  text-transform: uppercase;
+}
+.proj{
+  margin-top:20px;
+  margin-left:20px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  padding-left:10px;
+  padding-bottom: 20px;
+  line-height: 30px;
+  letter-spacing:2px;
+  color: white;
+  text-align: center;
+  font-family:'Nunito';
+  font-size: 16pt;
+  background-color: rgba(237, 203, 66, 1);
+}
+.divPro
+{
+  background-color: rgba(237, 203, 66, 1);
+  text-align: center;
+  display: block;
+}
+.smart {
+
+  padding:10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:80%;
+  background-color:rgba(10, 21, 74,1 );
+}
+.smart img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 70%;
+
+}
+.smart h1{
+  letter-spacing: 2px;
+  text-align:left;
+  font-family: 'Nunito';
+  font-size:12pt;
+  color:#fff;
+  text-transform: uppercase;
+}
+.smart h2{
+  padding:10px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: 'Teko';
+  font-size:22pt;
+  color:#fff;
+  text-transform: uppercase;
+}

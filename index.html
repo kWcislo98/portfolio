@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  <meta charset="utf-8">
+  <title>Portfolio Krzysztof Wcisło</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Teko&display=swap" rel="stylesheet">
+  </head>
+  <header>
+
+    <nav>
+      <ul class="ul">
+    <li style="float:left"><p class="logo">KRZYSZTOF <br>  WCISŁO</p></li>
+
+    <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a class="a" href="#aboutMe">About me</a>
+  <a class="a"href="#projects">Projects</a>
+  <a class="a" href="#contact">Contact</a>
+</div>
+
+<!-- Use any element to open the sidenav -->
+<li  style="float:right; margin-right:10px;"><span class="hamburger" onclick="openNav()"><br><div></div>
+<div></div>
+<div></div></span>
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+
+</div></li>
+</ul></nav>
+  </header>
+  <main>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
+    <script>
+ function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 360 || document.documentElement.scrollTop > 360) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.12em solid #757272}";
+        document.body.appendChild(css);
+    };
+</script>
+      <section class="banner">
+        <div class="vertical-center">
+          <h2>I AM A WEB<br>DEVELOPER</h2>
+              <h1 class="typewrite" data-period="2000" data-type='[ "Get to know me", "follow the menu", "or just swipe down"]'>
+                <span class="wrap"></span>
+              </a>
+            </h1>
+
+      </section>
+      <section class="about">
+        <div id="aboutMe" class="aboutMe">
+        <div class="proDiv">
+
+         <h2 class="h2a">About me</h2></div>
+          <p class="p-about">My name is Krzysztof<br>
+          I'm 21 years old student of Applied Computer Science at the Cracow Uniwersity of Economics. I have started my journey with an IT at the very begging of my studies. I've started with C, then I was learning C++ and Python, but what I like the most are Java and Web design.<br>
+          <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          </p>
+        </div>
+      </section>
+      <section id="projects" class="projects">
+        <div class="divPro">
+          <div class="proDiv">
+
+
+          <h1 class="h1pro">Projects</h1></div>
+          <p class="proj">Down below, there are descriptions of my projects and links to their repositories.</p>
+          <div class="smart">
+            <img src="img/pizza.jpg" alt="smart" class="smartp">
+            <h2>Pizza Smart</h2>
+            <h1>To create such page I used PHP, mySQLi, HTML5 and also CSS. Page has connection with database. Its repo is free to to seen <a href="github.com/kWcislo98/pizza-SMART">here</a>
+            </h1>
+          </div>
+
+        </div>
+      </section>
+      <section>
+        <div class="index-boxlink-1">
+
+        </div>
+      </section>
+  </main>
+  <footer>
+
+  </footer>
+</html>
